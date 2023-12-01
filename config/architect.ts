@@ -7,6 +7,10 @@ const architectConfig: ArchitectConfig = {
       prefix: 'authentication',
       as: 'authentication',
     },
+    security: {
+      prefix: '',
+      as: 'security',
+    },
   },
 }
 
