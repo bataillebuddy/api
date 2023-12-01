@@ -5,15 +5,16 @@
     "@adonisjs/core/build/commands/index.js",
     "@adonisjs/repl/build/commands"
   ],
-  "exceptionHandlerNamespace": "App/Exceptions/Handler",
+  "exceptionHandlerNamespace": "App/shared/exceptions/handler",
   "aliases": {
-    "App": "app",
+    "App": "apps",
     "Config": "config",
     "Database": "database",
-    "Contracts": "contracts"
+    "Contracts": "contracts",
+    "Domains": "domains"
   },
   "preloads": ["./start/routes", "./start/kernel"],
-  "providers": ["./providers/AppProvider", "@adonisjs/core"],
+  "providers": ["./providers/app_provider", "@adonisjs/core", "./services/architect/providers/architect_provider"],
   "aceProviders": ["@adonisjs/repl"],
   "tests": {
     "suites": [
