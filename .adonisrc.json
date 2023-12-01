@@ -3,7 +3,8 @@
   "commands": [
     "./commands",
     "@adonisjs/core/build/commands/index.js",
-    "@adonisjs/repl/build/commands"
+    "@adonisjs/repl/build/commands",
+    "@adonisjs/lucid/build/commands"
   ],
   "exceptionHandlerNamespace": "App/shared/exceptions/handler",
   "aliases": {
@@ -13,17 +14,32 @@
     "Contracts": "contracts",
     "Domains": "domains"
   },
-  "preloads": ["./start/routes", "./start/kernel"],
-  "providers": ["./providers/app_provider", "@adonisjs/core", "./services/architect/providers/architect_provider"],
-  "aceProviders": ["@adonisjs/repl"],
+  "preloads": [
+    "./start/routes",
+    "./start/kernel"
+  ],
+  "providers": [
+    "./providers/app_provider",
+    "@adonisjs/core",
+    "./services/architect/providers/architect_provider",
+    "@adonisjs/lucid",
+    "@adonisjs/auth"
+  ],
+  "aceProviders": [
+    "@adonisjs/repl"
+  ],
   "tests": {
     "suites": [
       {
         "name": "functional",
-        "files": ["tests/functional/**/*.spec(.ts|.js)"],
+        "files": [
+          "tests/functional/**/*.spec(.ts|.js)"
+        ],
         "timeout": 60000
       }
     ]
   },
-  "testProviders": ["@japa/preset-adonis/TestsProvider"]
+  "testProviders": [
+    "@japa/preset-adonis/TestsProvider"
+  ]
 }

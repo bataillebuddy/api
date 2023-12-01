@@ -1,7 +1,7 @@
 import { ArchitectConfig } from '@ioc:Adonis/Core/Architect'
 
 const architectConfig: ArchitectConfig = {
-  domains: [],
+  domains: ['users'],
   applications: {
     authentication: {
       prefix: 'authentication',
