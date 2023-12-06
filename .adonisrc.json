@@ -23,7 +23,8 @@
     "@adonisjs/core",
     "./services/architect/providers/architect_provider",
     "@adonisjs/lucid",
-    "@adonisjs/auth"
+    "@adonisjs/auth",
+    "@adonisjs/drive-s3"
   ],
   "aceProviders": [
     "@adonisjs/repl"
