@@ -10,8 +10,20 @@ export default class User extends BaseModel {
   @column()
   public email: string
 
+  @column()
+  public name: string
+
+  @column()
+  public lastname: string
+
   @column({ serializeAs: null })
   public password: string
+
+  @column()
+  public isAdmin: boolean
+
+  @column()
+  public hasAccessPanel: boolean
 
   @column()
   public rememberMeToken: string | null
