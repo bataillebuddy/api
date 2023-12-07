@@ -7,7 +7,15 @@
 
 import type { InferDisksFromConfig } from '@adonisjs/core/build/config'
 import type driveConfig from '../config/drive'
+import { DracoDriverConfig, DracoDriverContract } from '@ioc:Adonis/Addons/DracoDrive'
 
 declare module '@ioc:Adonis/Core/Drive' {
   interface DisksList extends InferDisksFromConfig<typeof driveConfig> {}
+
+  interface DriversList {
+    draco: {
+      config: DracoDriverConfig,
+      implementation: DracoDriverContract
+    }
+  }
 }

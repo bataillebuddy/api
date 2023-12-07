@@ -101,8 +101,21 @@ export default driveConfig({
       region: Env.get('S3_REGION'),
       bucket: Env.get('S3_BUCKET'),
       endpoint: Env.get('S3_ENDPOINT'),
-     // For minio to work
-     // forcePathStyle: true,
+      // For minio to work
+      forcePathStyle: true,
+    },
+
+    draco: {
+      driver: 'draco',
+      visibility: 'public',
+      key: Env.get('S3_KEY'),
+      secret: Env.get('S3_SECRET'),
+      region: Env.get('S3_REGION'),
+      bucket: Env.get('S3_BUCKET'),
+      endpoint: Env.get('S3_ENDPOINT'),
+
+      // For minio to work
+      forcePathStyle: true,
     },
 
     /*

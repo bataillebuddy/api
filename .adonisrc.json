@@ -20,6 +20,7 @@
   ],
   "providers": [
     "./providers/app_provider",
+    "./apps/storage/providers/storage_provider",
     "@adonisjs/core",
     "./services/architect/providers/architect_provider",
     "@adonisjs/lucid",
