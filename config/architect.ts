@@ -11,6 +11,10 @@ const architectConfig: ArchitectConfig = {
       prefix: '',
       as: 'security',
     },
+    storage: {
+      prefix: 'storage',
+      as: 'storage'
+    }
   },
 }
 
