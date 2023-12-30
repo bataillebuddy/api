@@ -1,8 +1,8 @@
 version: '3.8'
-
+name: game-app
 services:
   postgres:
-    container_name: postgres_adonis_services
+    container_name: postgres-games
     image: postgres:13
     volumes:
       - postgres_volume:/var/lib/postgresql/data
@@ -13,6 +13,7 @@ services:
     ports:
       - 5432:5432
   minio:
+    container_name: minio-games
     image: minio/minio
     ports:
       - "9000:9000"

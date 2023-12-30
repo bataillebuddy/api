@@ -1,6 +1,5 @@
 import { type MultipartFileContract } from '@ioc:Adonis/Core/BodyParser'
 import Logger from '@ioc:Adonis/Core/Logger'
-import { err } from 'pino-std-serializers'
 import Drive from '@ioc:Adonis/Core/Drive'
 
 class FilesServices {
