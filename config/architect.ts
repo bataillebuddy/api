@@ -14,6 +14,10 @@ const architectConfig: ArchitectConfig = {
     storage: {
       prefix: 'storage',
       as: 'storage'
+    },
+    rooms: {
+      prefix: '',
+      as: 'rooms'
     }
   },
 }

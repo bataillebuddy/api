@@ -1,7 +1,9 @@
 import { DateTime } from 'luxon'
 import Hash from '@ioc:Adonis/Core/Hash'
-import { column, beforeSave, BaseModel, beforeCreate } from '@ioc:Adonis/Lucid/Orm'
+import { column, beforeSave, BaseModel, beforeCreate, hasMany, HasMany } from '@ioc:Adonis/Lucid/Orm'
 import { randomUUID } from 'node:crypto'
+import Player from 'Domains/rooms/models/player'
+import Room from 'Domains/rooms/models/room'
 
 export default class User extends BaseModel {
   @column({ isPrimary: true })
@@ -27,6 +29,12 @@ export default class User extends BaseModel {
 
   @column()
   public rememberMeToken: string | null
+
+  @hasMany(() => Room)
+  public rooms: HasMany<typeof Room>
+
+  @hasMany(() => Player)
+  public players: HasMany<typeof Player>
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
